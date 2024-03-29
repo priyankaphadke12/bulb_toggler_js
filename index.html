@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <style>
+        body {
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+            min-height: 100vh;
+        }
+
+        .app-title {
+            text-align: center;
+            color: #800040;
+        }
+
+        .emoji-container {
+            background-color: #fff;
+            width: 250px;
+            display: flex;
+            padding: 10px;
+            margin-left: 400px;
+            margin-top: 35px;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+            
+        }
+
+        .emoji-img {
+            height: 180px;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .btn-emoji {
+            font-size: 20px;
+            padding: 5px 20px;
+            border-radius: 40px;
+            border: none;
+            margin: 0 20px;
+            cursor: pointer;
+
+        }
+
+        .btn-emoji:hover {
+            box-shadow: 0 0 10px gray;
+        }
+
+        .btn-happy {
+            background-image: linear-gradient(to right, #FF8008 0%, #FFC837 51%, #FF8008 100%);
+            margin: 10px;
+            padding: 5px 15px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: #ffff00;
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+            font-size: 15px;
+        }
+
+        .btn-happy:hover {
+            background-position: right center;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .btn-angry {
+            background-image: linear-gradient(to right, #FF512F 0%, #DD2476 51%, #FF512F 100%);
+            margin: 10px;
+            padding: 5px 15px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: #cc0052;
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+            font-size: 15px;
+        }
+
+        .btn-angry:hover {
+            background-position: right center;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .btn-cry {
+            background-image: linear-gradient(to right, #24C6DC 0%, #514A9D 51%, #24C6DC 100%);
+            margin: 10px;
+            padding: 5px 15px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: #002466;
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+            font-size: 15px;
+        }
+
+        .btn-cry:hover {
+            background-position: right center;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .btn-sad {
+            background-image: linear-gradient(to right, #FDFC47 0%, #24FE41 51%, #FDFC47 100%);
+            margin: 10px;
+            padding: 5px 15px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: #1a6600;
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+            font-size: 15px;
+        }
+
+        .btn-sad:hover {
+            background-position: right center;
+            color: #fff;
+            text-decoration: none;
+        }
+
+
+        @media screen and (max-width:600px) {
+            .emoji-container {
+                width: 80%
+            }
+
+            .emoji-img {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="app-title">Emoji Expressions Toggler..</h1>
+
+    <div class="emoji-container">
+        <img src="https://gifdb.com/images/high/happy-face-emoji-p827c7x967tma2l5.gif" class="emoji-img" id="emoji" />
+
+    </div>
+
+    <div class="btn-container">
+        <button class="btn-emoji btn-happy" onclick="turnhappy()">Happy</button>
+
+        <button class="btn-emoji btn-sad" onclick="turnsad()">Sad</button>
+
+        <button class="btn-emoji btn-cry" onclick="turncry()">Cry</button>
+
+        <button class="btn-emoji btn-angry" onclick="turnangry()">Angry</button>
+
+    </div>
+
+    <script>
+        function turnsad() {
+            const emojiElement = document.getElementById('emoji');
+            emojiElement.src = 'sad.png';
+        }
+
+        function turncry() {
+            const emojiElement = document.getElementById('emoji');
+            emojiElement.src = 'cry.png';
+        }
+
+        function turnangry() {
+            const emojiElement = document.getElementById('emoji');
+            emojiElement.src = 'angry.png';
+        }
+
+    </script>
+</body>
+
+</html>
